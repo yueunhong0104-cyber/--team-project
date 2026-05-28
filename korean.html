@@ -1,45 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Western Food</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="korean-page">
-
-        <!-- 오른쪽 메뉴 -->
-    <div class="menu-container">
-
-        <div class="menu-button korean"
-             onclick="location.href='korean.html'">
-            한식
-        </div>
-
-        <div class="menu-button western"
-             onclick="location.href='western.html'">
-            양식
-        </div>
-
-        <div class="menu-button chinese"
-             onclick="location.href='chinese.html'">
-            중식
-        </div>
-
-        <div class="menu-button japanese"
-             onclick="location.href='japanese.html'">
-            일식
-        </div>
-
-        <div class="menu-button cafe"
-             onclick="location.href='cafe.html'">
-            카페
-        </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한동맛집 지도 - 한식</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="map-page">
+    <div class="map-container">
+      <div class="pin korean-pin" style="left: 21%; top: 15%"></div>
+      <div class="pin korean-pin" style="left: 18%; top: 46%"></div>
+      <div class="pin korean-pin" style="left: 18%; top: 80%"></div>
     </div>
 
-</body>
+    <div class="menu-container">
+      <div class="menu-button korean" onclick="location.href = 'korean.html'">
+        한식
+      </div>
+      <div class="menu-button western" onclick="location.href = 'western.html'">
+        양식
+      </div>
+      <div class="menu-button chinese" onclick="location.href = 'chinese.html'">
+        중식
+      </div>
+      <div
+        class="menu-button japanese"
+        onclick="location.href = 'japanese.html'"
+      >
+        일식
+      </div>
+      <div class="menu-button cafe" onclick="location.href = 'cafe.html'">
+        카페
+      </div>
+    </div>
+  </body>
 </html>
