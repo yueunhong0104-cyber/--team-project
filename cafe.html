@@ -1,45 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cafe Food</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="cafe-page">
-
-        <!-- 오른쪽 메뉴 -->
-    <div class="menu-container">
-
-        <div class="menu-button korean"
-             onclick="location.href='korean.html'">
-            한식
-        </div>
-
-        <div class="menu-button western"
-             onclick="location.href='western.html'">
-            양식
-        </div>
-
-        <div class="menu-button chinese"
-             onclick="location.href='chinese.html'">
-            중식
-        </div>
-
-        <div class="menu-button japanese"
-             onclick="location.href='japanese.html'">
-            일식
-        </div>
-
-        <div class="menu-button cafe"
-             onclick="location.href='cafe.html'">
-            카페
-        </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한동맛집 지도 - 카페</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="map-page">
+    <div class="map-container">
+      <div class="pin cafe-pin" style="left: 65%; top: 65%"></div>
+      <div class="pin cafe-pin" style="left: 55%; top: 39%"></div>
+      <div class="pin cafe-pin" style="left: 60%; top: 50%"></div>
     </div>
 
-</body>
+    <div class="menu-container">
+      <a href="korean.html">
+        <img src="k.png" class="menu-img" alt="한식" />
+      </a>
+
+      <a href="western.html">
+        <img src="w.png" class="menu-img" alt="양식" />
+      </a>
+
+      <a href="chinese.html">
+        <img src="c.png" class="menu-img" alt="중식" />
+      </a>
+
+      <a href="japanese.html">
+        <img src="j.png" class="menu-img" alt="일식" />
+      </a>
+
+      <a href="cafe.html">
+        <img src="f.png" class="menu-img" alt="카페" />
+      </a>
+    </div>
+
+    <map name="">
+      <area
+        shape="rect"
+        coords=""
+        alt="로드샵카페"
+        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%A1%9C%EB%93%9C%EC%83%B5%EC%B9%B4%ED%8E%98&oquery=%EB%B3%B8%EA%B0%80%EA%BC%AC%EB%A7%89%EC%A7%AC%EB%BD%95&tqi=jm0lbsqosZwssisyx58-257273&ackey=3gg0eadb"
+      />
+      <area
+        shape="rect"
+        coords=""
+        alt="오픈오픈"
+        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EC%98%A4%ED%94%88%EC%98%A4%ED%94%88&oquery=%EB%A1%9C%EB%93%9C%EC%83%B5%EC%B9%B4%ED%8E%98&tqi=jm0lCdqosZwssisy2GV-372100&ackey=qwvxmrk1"
+      />
+      <area
+        shape="rect"
+        coords=""
+        alt="오후애"
+        href="https://map.naver.com/p/search/%EC%98%A4%ED%9B%84%EC%95%A0/place/1047091227?placePath=/home?bk_query=%EC%98%A4%ED%9B%84%EC%95%A0&entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=2&timestamp=202606011505&locale=ko&svcName=map_pcv5&searchText=%EC%98%A4%ED%9B%84%EC%95%A0&placeSearchOption=bk_query%3D%25EC%2598%25A4%25ED%259B%2584%25EC%2595%25A0%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3D%25EC%2598%25A4%25ED%259B%2584%25EC%2595%25A0%26x%3D129.341663%26y%3D36.107199&searchType=place"
+      />
+    </map>
+  </body>
 </html>

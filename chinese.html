@@ -1,45 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Chinese Food</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="chinese-page">
-
-        <!-- 오른쪽 메뉴 -->
-    <div class="menu-container">
-
-        <div class="menu-button korean"
-             onclick="location.href='korean.html'">
-            한식
-        </div>
-
-        <div class="menu-button western"
-             onclick="location.href='western.html'">
-            양식
-        </div>
-
-        <div class="menu-button chinese"
-             onclick="location.href='chinese.html'">
-            중식
-        </div>
-
-        <div class="menu-button japanese"
-             onclick="location.href='japanese.html'">
-            일식
-        </div>
-
-        <div class="menu-button cafe"
-             onclick="location.href='cafe.html'">
-            카페
-        </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한동맛집 지도 - 중식</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="map-page">
+    <div class="map-container">
+      <div class="pin chinese-pin" style="left: 31%; top: 43%"></div>
+      <div class="pin chinese-pin" style="left: 42%; top: 90%"></div>
     </div>
 
-</body>
+    <div class="menu-container">
+      <a href="korean.html">
+        <img src="k.png" class="menu-img" alt="한식" />
+      </a>
+
+      <a href="western.html">
+        <img src="w.png" class="menu-img" alt="양식" />
+      </a>
+
+      <a href="chinese.html">
+        <img src="c.png" class="menu-img" alt="중식" />
+      </a>
+
+      <a href="japanese.html">
+        <img src="j.png" class="menu-img" alt="일식" />
+      </a>
+
+      <a href="cafe.html">
+        <img src="f.png" class="menu-img" alt="카페" />
+      </a>
+    </div>
+
+    <map name="">
+      <area
+        shape="rect"
+        coords=""
+        alt="포항돌짜장"
+        href="http://map.naver.com/p/search/%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5/place/1171882688?placePath=/home?bk_query=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=2&timestamp=202606011459&locale=ko&svcName=map_pcv5&searchText=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&searchType=place"
+      />
+      <area
+        shape="rect"
+        coords=""
+        alt="본가꼬막짬뽕"
+        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B3%B8%EA%B0%80%EA%BC%AC%EB%A7%89%EC%A7%AC%EB%BD%95&oquery=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&tqi=jm0QVlqosZwssisx8MC-007861&ackey=wztu9j16"
+      />
+    </map>
+  </body>
 </html>
