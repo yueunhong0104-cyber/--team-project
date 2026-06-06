@@ -8,8 +8,38 @@
   </head>
   <body class="map-page">
     <div class="map-container">
-      <div class="pin chinese-pin" style="left: 31%; top: 43%"></div>
-      <div class="pin chinese-pin" style="left: 42%; top: 90%"></div>
+      <div class="pin-wrapper" style="left: 59%; top: 50%">
+        <div class="pin chinese-pin"></div>
+        <div class="popup">
+          <img src="포항 돌짜장.png" alt="포항돌짜장" usemap="#포항돌짜장" />
+          <map name="포항돌짜장">
+            <area
+              shape="rect"
+              coords="55,54,315,90"
+              href="http://map.naver.com/p/search/%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5/place/1171882688?placePath=/home?bk_query=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=2&timestamp=202606011459&locale=ko&svcName=map_pcv5&searchText=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&searchType=place"
+              target="_blank"
+            />
+          </map>
+        </div>
+      </div>
+      <div class="pin-wrapper" style="left: 56%; top: 74%">
+        <div class="pin chinese-pin"></div>
+        <div class="popup">
+          <img
+            src="본가꼬막짬뽕.png"
+            alt="본가꼬막짬뽕"
+            usemap="#본가꼬막짬뽕"
+          />
+          <map name="본가꼬막짬뽕">
+            <area
+              shape="rect"
+              coords="55,54,315,90"
+              href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B3%B8%EA%B0%80%EA%BC%AC%EB%A7%89%EC%A7%AC%EB%BD%95&oquery=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&tqi=jm0QVlqosZwssisx8MC-007861&ackey=wztu9j16"
+              target="_blank"
+            />
+          </map>
+        </div>
+      </div>
     </div>
 
     <div class="menu-container">
@@ -34,19 +64,40 @@
       </a>
     </div>
 
-    <map name="">
-      <area
-        shape="rect"
-        coords=""
-        alt="포항돌짜장"
-        href="http://map.naver.com/p/search/%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5/place/1171882688?placePath=/home?bk_query=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=2&timestamp=202606011459&locale=ko&svcName=map_pcv5&searchText=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&entry=pll&from=nx&fromNxList=true&searchType=place"
-      />
-      <area
-        shape="rect"
-        coords=""
-        alt="본가꼬막짬뽕"
-        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%B3%B8%EA%B0%80%EA%BC%AC%EB%A7%89%EC%A7%AC%EB%BD%95&oquery=%ED%8F%AC%ED%95%AD%EB%8F%8C%EC%A7%9C%EC%9E%A5&tqi=jm0QVlqosZwssisx8MC-007861&ackey=wztu9j16"
-      />
-    </map>
+    <script>
+      const pins = document.querySelectorAll(".pin");
+
+      pins.forEach((pin) => {
+        pin.addEventListener("click", function (event) {
+          const currentPopup = this.parentElement.querySelector(".popup");
+
+          // 다른 팝업 닫기
+          document.querySelectorAll(".popup").forEach((popup) => {
+            if (popup !== currentPopup) {
+              popup.classList.remove("show");
+            }
+          });
+
+          // 현재 팝업 열기/닫기
+          currentPopup.classList.toggle("show");
+
+          event.stopPropagation();
+        });
+      });
+
+      // 빈 곳 클릭 시 모든 팝업 닫기
+      document.addEventListener("click", function () {
+        document.querySelectorAll(".popup").forEach((popup) => {
+          popup.classList.remove("show");
+        });
+      });
+
+      // 팝업 내부 클릭 시 닫히지 않게
+      document.querySelectorAll(".popup").forEach((popup) => {
+        popup.addEventListener("click", function (event) {
+          event.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>
