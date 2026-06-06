@@ -8,10 +8,35 @@
   </head>
   <body class="map-page">
     <div class="map-container">
-      <div class="pin western-pin" style="left: 67%; top: 33%"></div>
-      <div class="pin western-pin" style="left: 45%; top: 39%"></div>
-      <div class="pin western-pin" style="left: 40%; top: 50%"></div>
-    </div>
+      <div class="pin-wrapper" style="left: 55%; top: 60%">
+        <div class="pin western-pin"></div>
+        <div class="popup">
+          <img src="인브리즈.png" alt="인브리즈" usemap="#인브리즈" />
+          <map name="인브리즈">
+            <area
+              shape="rect"
+              coords="55,54,315,90"
+              href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EC%9D%B8%EB%B8%8C%EB%A6%AC%EC%A6%88&oquery=%EB%8C%80%EC%9E%A0%EB%A9%98%EC%85%98+%EC%9A%B0%EB%93%9C%ED%8C%8C%EC%9D%B4%EC%96%B4&tqi=jmm4isqXKZwssB5L2Uh-431082&ackey=uumxykmy"
+              target="_blank"
+            />
+          </map>
+        </div>
+      </div>
+      <div class="pin-wrapper" style="left: 45%; top: 50%">
+        <div class="pin western-pin"></div>
+        <div class="popup">
+          <img src="대잠맨션 우드파이어.png" alt="대잠맨션 우드파이어" usemap="#대잠맨션 우드파이어" />
+          <map name="대잠맨션 우드파이어">
+            <area
+              shape="rect"
+              coords="55,54,315,90"
+              href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%8C%80%EC%9E%A0%EB%A7%A8%EC%85%98+%EC%9A%B0%EB%93%9C%ED%8C%8C%EC%9D%B4%EC%96%B4&oquery=%EB%8C%80%EC%9E%A0%EB%A9%98%EC%85%98+%EC%9A%B0%EB%93%9C%ED%8C%8C%EC%9D%B4%EC%96%B4&tqi=jAeEOwqX5mhsslaJYx0-220952&ackey=whq8f3hb"
+              target="_blank"
+            />
+          </map>
+        </div>
+      </div>
+
 
     <div class="menu-container">
       <a href="korean.html">
@@ -35,25 +60,40 @@
       </a>
     </div>
 
-    <map name="">
-      <area
-        shape="rect"
-        coords=""
-        alt="plz"
-        href="http://map.naver.com/p/search/piz/place/1654122315?placePath=?bk_query=piz&entry=pll&from=nx&fromNxList=true&searchType=place"
-      />
-      <area
-        shape="rect"
-        coords=""
-        alt="대잠멘션 우드파이어"
-        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EB%8C%80%EC%9E%A0%EB%A9%98%EC%85%98+%EC%9A%B0%EB%93%9C%ED%8C%8C%EC%9D%B4%EC%96%B4&oquery=%EB%8C%80%EC%9E%A0%EB%A9%98%EC%85%98&tqi=jmm4LwqXKZwssB5L0I4-265514&ackey=2kfxxqr4"
-      />
-      <area
-        shape="rect"
-        coords=""
-        alt="인브리즈"
-        href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EC%9D%B8%EB%B8%8C%EB%A6%AC%EC%A6%88&oquery=%EB%8C%80%EC%9E%A0%EB%A9%98%EC%85%98+%EC%9A%B0%EB%93%9C%ED%8C%8C%EC%9D%B4%EC%96%B4&tqi=jmm4isqXKZwssB5L2Uh-431082&ackey=uumxykmy"
-      />
-    </map>
+    <script>
+      const pins = document.querySelectorAll(".pin");
+
+      pins.forEach((pin) => {
+        pin.addEventListener("click", function (event) {
+          const currentPopup = this.parentElement.querySelector(".popup");
+
+          // 다른 팝업 닫기
+          document.querySelectorAll(".popup").forEach((popup) => {
+            if (popup !== currentPopup) {
+              popup.classList.remove("show");
+            }
+          });
+
+          // 현재 팝업 열기/닫기
+          currentPopup.classList.toggle("show");
+
+          event.stopPropagation();
+        });
+      });
+
+      // 빈 곳 클릭 시 모든 팝업 닫기
+      document.addEventListener("click", function () {
+        document.querySelectorAll(".popup").forEach((popup) => {
+          popup.classList.remove("show");
+        });
+      });
+
+      // 팝업 내부 클릭 시 닫히지 않게
+      document.querySelectorAll(".popup").forEach((popup) => {
+        popup.addEventListener("click", function (event) {
+          event.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>
