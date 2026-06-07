@@ -48,18 +48,43 @@ body {
   background-color: #52bac5;
 }
 
-/* 중앙 이미지 */
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-30px);
+}
+
 .title-image {
-  width: 650px;
-
+  width: 700px;
+  height: auto;
+  display: block;
   cursor: pointer;
-
   transition: 0.3s;
 }
 
-/* 마우스 올렸을 때 */
 .title-image:hover {
   transform: scale(1.05);
+}
+
+.start-text {
+  margin-top: 15px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  font-family: "Jua", "Pretendard", sans-serif;
+  transition: 0.3s;
+}
+
+.start-text:hover {
+  transform: translateY(-5px) scale(1.08);
+  text-shadow:
+    0 0 10px white,
+    0 0 20px white;
+  cursor: pointer;
 }
 
 /* 지도가 화면 전체에 꽉 차게 만드는 기본 상자 설정 */
